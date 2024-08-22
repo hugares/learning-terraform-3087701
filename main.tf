@@ -59,7 +59,7 @@ module "blog_alb" {
 
   target_groups = [
     {
-      name_prefix      = "pref-"
+      name_prefix      = "blog-"
       backend_protocol = "HTTP"
       backend_port     = 80
       target_type      = "instance"
@@ -81,7 +81,7 @@ module "blog_alb" {
   ]
 
   tags = {
-    Environment = "Test"
+    Environment = "dev"
   }
 }
 
